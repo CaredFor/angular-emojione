@@ -20,7 +20,10 @@
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
     "build": "npm run lint && ./build.sh",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "precommit": [
+      "build"
+    ]
   },
   "files": [
     "dist/**"
