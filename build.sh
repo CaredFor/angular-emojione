@@ -14,7 +14,7 @@ $NGC -p src/tsconfig-build.json
 
 # Rollup angular-emojione.js
 echo "ROLLUP - Build ES2015"
-$ROLLUP -e @angular/core,emojione,emojione/index -f es build/angular-emojione.js -o dist/angular-emojione.js
+$ROLLUP -e @angular/core,emojione -f es build/angular-emojione.js -o dist/angular-emojione.js
 
 # Run Angular Compiler to ES5
 echo "NGC - Build ES5"
@@ -22,7 +22,7 @@ $NGC -p src/tsconfig-es5.json
 
 # Rollup angular-emojione.js
 echo "ROLLUP - Build ES5"
-$ROLLUP -e @angular/core,emojione,emojione/index -f es build/angular-emojione.js -o dist/angular-emojione.es5.js
+$ROLLUP -e @angular/core,emojione -f es build/angular-emojione.js -o dist/angular-emojione.es5.js
 
 # Copy non-js files from build
 echo "COPY - Non-js Files"
